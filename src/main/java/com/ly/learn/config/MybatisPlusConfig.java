@@ -13,7 +13,6 @@ import org.springframework.context.annotation.Configuration;
  * @Version 1.0
  */
 @Configuration
-//@MapperScan("com.ly.learn.mapper.*")
 public class MybatisPlusConfig {
     /*
      * 分页插件
@@ -30,7 +29,7 @@ public class MybatisPlusConfig {
     @Bean
     public MapperScannerConfigurer mapperScannerConfigurer() {
         MapperScannerConfigurer scannerConfigurer = new MapperScannerConfigurer();
-        scannerConfigurer.setBasePackage("com.ly.learn.mapper*");
+        scannerConfigurer.setBasePackage("com.ly.learn.mapper");
         return scannerConfigurer;
     }
 

@@ -1,7 +1,7 @@
 package com.ly.learn.mapper;
-// com.ly.learn.mapper
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.ly.learn.entity.TbAdminUserEntity;
+import org.springframework.stereotype.Repository;
 
 /**
  * <p>
@@ -11,7 +11,7 @@ import com.ly.learn.entity.TbAdminUserEntity;
  * @author braveliu
  * @since 2020-01-06
  */
-
-public interface TbAdminUserMapper extends BaseMapper<TbAdminUserEntity> {
+@Repository
+public interface TbAdminUserRepository extends BaseMapper<TbAdminUserEntity> {
 
 }

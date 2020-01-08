@@ -1,8 +1,13 @@
 package com.ly.learn.controller;
 
 
+import com.ly.learn.entity.TbAdminUserEntity;
+import com.ly.learn.service.ITbAdminUserService;
 import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -17,8 +22,12 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 @Api(value = "test")
 public class TbAdminUserController {
+    @Autowired
+    ITbAdminUserService iTbAdminUserService;
 
-    public String get() {
+    @GetMapping(value = "v1/getById")
+    public String getById() {
+        TbAdminUserEntity byId = iTbAdminUserService.getById(1);
         return "1";
     }
 }
