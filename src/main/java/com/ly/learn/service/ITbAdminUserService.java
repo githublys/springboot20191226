@@ -13,5 +13,5 @@ import com.ly.learn.entity.TbAdminUserEntity;
  * @since 2020-01-06
  */
 public interface ITbAdminUserService extends IService<TbAdminUserEntity> {
-   TbAdminUserEntity getById(int id);
+   TbAdminUserEntity get(int id);
 }

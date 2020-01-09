@@ -6,3 +6,5 @@ spring:
   http:
     encoding:
       force: true
+  application:
+    name: learnspringboot

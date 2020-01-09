@@ -20,9 +20,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class TbAdminUserServiceImpl extends ServiceImpl<TbAdminUserRepository, TbAdminUserEntity> implements ITbAdminUserService {
    @Override
-    public TbAdminUserEntity getById(int id) {
-       TbAdminUserEntity e = new TbAdminUserEntity();
-       e.setId(1L);
+    public TbAdminUserEntity get(int id) {
+       TbAdminUserEntity e =  getById(id);
         return e;
     }
 }
